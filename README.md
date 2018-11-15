@@ -15,3 +15,7 @@ The project has the following milestones
 5. Extend the pre-threaded image processing server so that the manager thread has higher priority than the worker threads.
 
 Demo: Set the number of worker threads to the one less than the number of cores on your system. Set the buffer size to twice the number of threads. Insert a delay of 30 seconds for the worker threads. Now send a series of different client requests using multiple clients. Since the manager is running at a higher priority and the worker threads are slow to process the requests (due to the delay), the manager will preempt the workers whenever there is a request from the client, resulting in manager finding the connection descriptor buffer full. Print appropriate messages from the manager and worker threads to demonstrate that the manager thread is indeed running at a higher priority.
+
+### Flow Chart
+
+![capture](https://user-images.githubusercontent.com/34761404/48585602-1b76b580-e8fb-11e8-9630-725f4147b713.JPG)
